@@ -27,11 +27,12 @@ class App extends React.Component {
     }
 
     render() {
-        const filterRobots = this.state.robots.filter(robot =>{
-            return (robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase()) ||
-                    robot.email.toLowerCase().includes(this.state.searchfield.toLowerCase()));
+      const { robots, searchfield } = this.state
+        const filterRobots = robots.filter(robot =>{
+            return (robot.name.toLowerCase().includes(searchfield.toLowerCase()) ||
+                    robot.email.toLowerCase().includes(searchfield.toLowerCase()));
         })
-        if(this.state.robots.length===0){
+        if(robots.length===0){
           return(
             <div className='h1Center'>
               <h1>Loading...</h1>
