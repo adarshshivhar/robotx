@@ -10,3 +10,12 @@ h1{
   font-weight: 200;
   color: #0ccac4;
 }
+
+.h1Center{
+  height: 600px;
+  width: 1350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
